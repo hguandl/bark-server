@@ -19,8 +19,8 @@ import (
 	bolt "go.etcd.io/bbolt"
 
 	"github.com/sideshow/apns2"
-	"github.com/sideshow/apns2/token"
 	"github.com/sideshow/apns2/payload"
+	"github.com/sideshow/apns2/token"
 )
 
 type BaseResponse struct {
