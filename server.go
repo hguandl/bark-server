@@ -301,14 +301,16 @@ func runBarkServer() {
 	r.Get("/register", http.HandlerFunc(register))
 	r.Post("/register", http.HandlerFunc(register))
 
-	r.Get("/:key/:body", http.HandlerFunc(index))
-	r.Post("/:key/:body", http.HandlerFunc(index))
+	r.Post("/feed", http.HandlerFunc(akFeed))
 
-	r.Get("/:key/:title/:body", http.HandlerFunc(index))
-	r.Post("/:key/:title/:body", http.HandlerFunc(index))
+	// r.Get("/:key/:body", http.HandlerFunc(index))
+	// r.Post("/:key/:body", http.HandlerFunc(index))
 
-	r.Get("/:key/:category/:title/:body", http.HandlerFunc(index))
-	r.Post("/:key/:category/:title/:body", http.HandlerFunc(index))
+	// r.Get("/:key/:title/:body", http.HandlerFunc(index))
+	// r.Post("/:key/:title/:body", http.HandlerFunc(index))
+
+	// r.Get("/:key/:category/:title/:body", http.HandlerFunc(index))
+	// r.Post("/:key/:category/:title/:body", http.HandlerFunc(index))
 
 	err = http.ListenAndServe(addr, r)
 	if err != nil {
