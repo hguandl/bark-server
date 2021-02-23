@@ -298,8 +298,8 @@ func runBarkServer() {
 	r.Get("/ping", http.HandlerFunc(ping))
 	r.Post("/ping", http.HandlerFunc(ping))
 
-	r.Get("/register", http.HandlerFunc(register))
-	r.Post("/register", http.HandlerFunc(register))
+	r.Get("/register", http.HandlerFunc(akRegister))
+	r.Post("/register", http.HandlerFunc(akRegister))
 
 	r.Post("/feed", http.HandlerFunc(akFeed))
 
